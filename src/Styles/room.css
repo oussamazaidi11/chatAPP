@@ -1,0 +1,87 @@
+#sign {
+  width: 90%;
+  max-width: 700px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  height: 1000px;
+  margin: 6% auto 0 auto;
+  box-shadow: 4px 1px 2px 0px rgb(134, 179, 216);
+  background: url('../assets/beg.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: moveBg 10s linear infinite;
+  padding: 20px; 
+}
+
+
+@keyframes moveBg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem); 
+  font-weight: bolder;
+  font-family: Impact, sans-serif;
+  padding-top: 100px;
+  color: #1762d3;
+  margin-left: 0;
+  text-decoration: underline wavy #4fe9b6; 
+  animation: textGlow 3s ease-in-out infinite alternate;
+  text-align: center;
+  width: 100%;
+}
+#disp{ 
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 4px 1px 2px 0px rgb(134, 179, 216);
+    font-size: large;
+
+}
+#btn2{
+  width: 200px;
+  height: 40px;
+  margin-top: 40px;
+  border: none;
+  box-shadow: 4px 1px 2px 0px rgb(28, 231, 231);
+  border-radius: 25px;
+  background-color: lightblue;
+  font-size: large;
+  font-weight: lighter;
+  font-style: oblique;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+
+#btn2:hover {
+  background-color: rgb(5, 84, 110);
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  #sign {
+    height: auto; 
+    padding: 40px 20px;
+  }
+
+  h1{
+    padding-top: 50px;
+    font-size: 2rem;
+  }
+
+  #btn2 {
+    width: 60%;
+    max-width: 300px;
+    height: 45px;
+  }
+}

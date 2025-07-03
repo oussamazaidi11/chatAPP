@@ -1,0 +1,119 @@
+#sign {
+  width: 90%;
+  max-width: 700px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  height: 700px;
+  margin: 6% auto 0 auto;
+  box-shadow: 4px 1px 2px 0px rgb(134, 179, 216);
+  background: url('../assets/beg.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: moveBg 10s linear infinite;
+  padding: 20px; 
+}
+
+
+@keyframes moveBg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+
+h1{
+  font-size: clamp(1.5rem, 5vw, 3rem); 
+  font-weight: bolder;
+  font-family: Impact, sans-serif;
+  padding-top: 100px;
+  color: #1762d3;
+  margin-left: 0;
+  text-decoration: underline wavy #4fe9b6; 
+  animation: textGlow 3s ease-in-out infinite alternate;
+  text-align: center;
+  width: 100%;
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 5px #b470e2, 0 0 10px #cb60f5;
+  }
+  100% {
+    text-shadow: 0 0 20px #4c6ea0, 0 0 40px #6ea8eb;
+  }
+}
+
+
+#btn1 {
+  width: 200px;
+  height: 40px;
+  margin-top: 40px;
+  border: none;
+  box-shadow: 4px 1px 2px 0px rgb(28, 231, 231);
+  border-radius: 25px;
+  background-color: lightblue;
+  font-size: large;
+  font-weight: lighter;
+  font-style: oblique;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+
+#btn1:hover {
+  background-color: rgb(5, 84, 110);
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  #sign {
+    height: auto; 
+    padding: 40px 20px;
+  }
+
+  h1{
+    padding-top: 50px;
+    font-size: 2rem;
+  }
+
+  #btn1 {
+    width: 100%;
+    max-width: 300px;
+    height: 45px;
+  }
+}
+
+#icon {
+  margin-right: 12px;
+}
+#txt p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s forwards;
+}
+
+
+#txt p:nth-child(1) {
+  animation-delay: 0.3s;
+}
+#txt p:nth-child(2) {
+  animation-delay: 1.1s;
+}
+#txt p:nth-child(3) {
+  animation-delay: 1.9s;
+}
+
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

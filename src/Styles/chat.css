@@ -1,0 +1,119 @@
+#messagelist {
+  max-width: 500px;
+  width: 90%;
+  margin: 40px auto;
+  
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('../assets/beg.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: moveBg 10s linear infinite;
+  padding: 20px; 
+}
+
+@keyframes moveBg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* Room title */
+#messagelist h2 {
+  margin: 0 0 15px 0;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  user-select: none;
+}
+
+/* Messages container - scrollable */
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background:transparent;
+  box-shadow: inset 0 0 5px #ddd;
+  scroll-behavior: smooth;
+}
+
+/* Individual message bubble */
+.messages > div {
+  margin-bottom: 12px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  max-width: 80%;
+  background-color: #e4e6eb;
+  word-wrap: break-word;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  display: block;
+}
+
+/* User name styling */
+.messages > div span {
+  font-weight: 600;
+  margin-right: 6px;
+  color: #2b2d42;
+}
+
+/* Align your messages to right */
+.messages > div.self {
+  background-color: #0084ff;
+  color: white;
+  margin-left: auto;
+  box-shadow: 1px 1px 5px rgba(0,132,255,0.6);
+}
+
+/* Form styling */
+form {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+form input[type="text"] {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus {
+  border-color: #0084ff;
+}
+
+form button {
+  background-color: #0084ff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #005ecb;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #messagelist {
+    height: 90vh;
+    padding: 15px;
+  }
+}
